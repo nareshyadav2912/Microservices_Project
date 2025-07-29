@@ -1,27 +1,17 @@
-package com.example.accounts.entity;
+package com.example.accounts.dto;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Entity
-public class Accounts extends BaseEntity{
-
-    private Integer customerId;
-
-    @Id
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class AccountsDto {
     private Integer accountNo;
     private String accountType;
     private String branchAddress;
-
-    public Integer getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(Integer customerId) {
-        this.customerId = customerId;
-    }
 
     public Integer getAccountNo() {
         return accountNo;
